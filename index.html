@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@400;700&display=swap">
+    <title>Tienda de Videojuegos Free-to-Play</title>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>GameZone</h1>
+    </div>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#games">Juegos</a></li>
+            <li><a href="#favorites">Favoritos</a></li>
+            <li><a href="#register">Registrar Juego</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="home-section">
+    <div class="hero-content">
+        <h2>Descubre los Últimos Juegos</h2>
+        <p>¡Bienvenido a GameZone! La mejor tienda de videojuegos gratuitos en línea. Explora, juega y disfruta.</p>
+        <button class="cta-btn">Comienza a Jugar</button>
+    </div>
+</section>
+
+<section id="games" class="games-section">
+    <h2>Lista de Juegos</h2>
+    <div class="filter-container">
+        <input type="text" id="search" placeholder="Buscar juegos..." oninput="filterGames()">
+        <select id="category-filter" onchange="filterGames()">
+            <option value="">Seleccionar Categoría</option>
+            <option value="action">Acción</option>
+            <option value="adventure">Aventura</option>
+            <option value="sports">Deportes</option>
+            <option value="puzzle">Rompecabezas</option>
+            <option value="strategy">Estrategia</option>
+        </select>
+    </div>
+    <div class="games-list" id="games-list">
+       
+    </div>
+</section>
+<section id="game" class="game-section">
+    <h2>Juego de Carrera Acelerada</h2>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div class="game-controls">
+        <button id="startGame" onclick="startGame()">Iniciar Juego</button>
+        <p id="gameStatus"></p>
+    </div>
+</section>
+
+
+<section id="favorites" class="favorites-section">
+    <h2>Juegos Favoritos <span id="favorite-count">(0)</span></h2>
+    <div class="favorites-list" id="favorites-list">
+        <!-- Juegos favoritos se cargarán aquí -->
+    </div>
+</section>
+
+<section id="register" class="developer-form-section">
+    <h2>Registro de Desarrolladores</h2>
+    <form id="register-form" onsubmit="registerGame(event)">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" required>
+        <label for="game">Nombre del Juego:</label>
+        <input type="text" id="game" required>
+        <label for="link">Enlace al Juego:</label>
+        <input type="url" id="link" required>
+        <button type="submit">Registrar Juego</button>
+    </form>
+</section>
+
+<section id="car-racing" class="car-racing-section">
+    <h2>Juego de Carrera Acelerada</h2>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div class="game-controls">
+        <button id="startGame" onclick="startGame()">Iniciar Juego</button>
+        <p id="gameStatus"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 GameZone. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #eaeaea;
+}
+
+header {
+    background: #141414;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #ff773d;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation ul li {
+    margin-left: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #eaeaea;
+    transition: color 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: #ff773d;
+}
+
+.home-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('principal.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.cta-btn {
+    background-color: #ff773d;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #e66b30;
+}
+
+.games-section, .favorites-section, .developer-form-section, .reviews-section {
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #eaeaea;
+}
+
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background: #2b2b2b;
+    border-radius: 5px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    margin-right: 10px;
+}
+
+.rating button {
+    background: #ff773d;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rating button:hover {
+    background-color: #e66b30;
+}
+
+.favorites-section {
+    background-color: #141414;
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.developer-form-section, .reviews-section {
+    background: #2b2b2b;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.developer-form-section h2, .reviews-section h2 {
+    margin-bottom: 20px;
+}
+
+.developer-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.developer-form-section label, .reviews-section label {
+    margin-top: 10px;
+}
+
+.developer-form-section input, .reviews-section input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #3b3b3b;
+    color: #eaeaea;
+}
+
+.developer-form-section button, .reviews-section button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff773d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.developer-form-section button:hover, .reviews-section button:hover {
+    background-color: #e66b30;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #141414;
+    color: #eaeaea;
+}
+
+footer p {
+    margin: 0;
+}
+
+.game-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+#gameCanvas {
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.game-controls {
+    margin-top: 20px;
+}
+
+
+/* Animaciones para la entrada de los juegos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.game-card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.review-item {
+    background: #3b3b3b;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
